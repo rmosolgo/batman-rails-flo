@@ -24,6 +24,13 @@ And then execute:
 
     $ bundle
 
+
+Add the client code to your batman.js app's Sprockets manifest:
+
+```coffeescript
+#= require batman/live_reload
+```
+
 ## Run the live-reload server
 
 You'll need node.js. Execute:
