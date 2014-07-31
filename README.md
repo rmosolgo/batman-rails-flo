@@ -10,6 +10,8 @@ Live-reload your [batman.js](http://batmanjs.org) app with [`fb-flo`](https://gi
 - Live reloading CSS
 - Fires `liveReload` on `MyApp` so you can define custom handlers
 
+[Learn more in the wiki!](https://github.com/rmosolgo/batman-rails-flo/wiki)
+
 ## Installation
 
 Get the [`fb-flo`](https://chrome.google.com/webstore/detail/fb-flo/ahkfhobdidabddlalamkkiafpipdfchp) Chrome extension.
