@@ -1,4 +1,3 @@
-#= require ./live_reload
 handleLiveReloadEvent = (ev) ->
   try
     code = ev.data.contents

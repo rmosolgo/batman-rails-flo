@@ -43,7 +43,7 @@ function resolver(filepath, callback) {
       // in case there are any preprocessors involved.
       contents = "HTML>>" + fileURL
       console.log("HTML", contents)
-      fileURL = "/assets/extras/live_reload.js"
+      fileURL = "/assets/batman/live_reload.js"
     } else if (isCSS) {
       // for CSS, blank out the contents.
       // Again, we'll reload it from the asset pipeline in case there

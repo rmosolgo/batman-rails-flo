@@ -1,8 +1,18 @@
-# Batman::Rails::Flo
+# batman-rails-flo
 
-TODO: Write a gem description
+Live-reload your [batman.js](http://batmanjs.org) app with [`fb-flo`](https://github.com/facebook/fb-flo).
+
+
+## Features
+
+- Live reloading Models, Controllers and Views
+- Live reloading HTML templates
+- Live reloading CSS
+- Fires `liveReload` on `MyApp` so you can define custom handlers
 
 ## Installation
+
+Get the [`fb-flo`](https://chrome.google.com/webstore/detail/fb-flo/ahkfhobdidabddlalamkkiafpipdfchp) Chrome extension.
 
 Add this line to your application's Gemfile:
 
@@ -12,13 +22,14 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+## Run the live-reload server
 
-    $ gem install batman-rails-flo
+You'll need node.js. Execute:
 
-## Usage
+    $ bundle exec rake batman:live_reload
 
-TODO: Write usage instructions here
+And re-connect with the `fb-flo` plugin if necessary
+
 
 ## Contributing
 
