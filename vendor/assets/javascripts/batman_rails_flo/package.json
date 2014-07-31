@@ -1,0 +1,15 @@
+{
+  "name": "batman_rails_flo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "flo_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "fb-flo": "^0.2.1"
+  }
+}

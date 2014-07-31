@@ -16,6 +16,16 @@ Batman.Object::refreshProperties = ->
     property.refresh()
 
 ###
+This will force reload of class accessors that are rendered in views.
+###
+
+Batman.App.liveReloadClass = (className) ->
+  re = new RegExp(className)
+  @_batman.properties.forEach (name, property) ->
+    if name.match(re)
+      property.refresh()
+
+###
 For app classes, `.liveReload` has to:
 
 - Identify existing instances of the class

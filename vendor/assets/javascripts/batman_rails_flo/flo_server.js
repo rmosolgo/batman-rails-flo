@@ -3,7 +3,7 @@ var flo = require('fb-flo'),
     fs = require('fs'),
     coffee = require('coffee-script');
 
-var sourceDirToWatch = "./app/assets/batman/";
+var sourceDirToWatch = "./app/assets/";
 
 var server = flo(
   sourceDirToWatch,
@@ -27,6 +27,7 @@ function resolver(filepath, callback) {
 
     var contents = fs.readFileSync(sourceDirToWatch + filepath).toString()
     var folderName = filepath
+      .replace(/batman\//, '') // It's not in the asset path
       .replace(/\.coffee/, '');
     var fileURL = 'assets/' + folderName
 
@@ -50,6 +51,7 @@ function resolver(filepath, callback) {
       fileURL = fileURL
         .match(/(.*\.css)/, '$1')[0]  // remove any preprocessors
         .replace(/\/stylesheets/, "") // remove unneeded path
+      console.log("CSS", fileURL)
       contents = "" // we'll force reload on the client
     }
 

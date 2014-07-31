@@ -13,7 +13,6 @@ handleLiveReloadEvent = (ev) ->
     if isHTML
       htmlPath = code.substr(6)
       console.debug "HTML Reload: #{htmlPath}"
-      # Batman.View.liveReloadHTML(htmlPath)
       Batman.View.liveReloadHTML()
 
     else if isCSS
@@ -31,9 +30,17 @@ handleLiveReloadEvent = (ev) ->
       else
         console.warn("NO CSS FOUND FOR #{cssPath}")
 
+    # Classes can implement .liveReload hooks
     else if appClass?.liveReload
       console.debug "#{className} Reload: #{ev.data.url}"
       appClass.liveReload?(className, code)
+      Batman.currentApp.liveReloadClass(className)
+
+    # handle a plain-js class by just eval'ing the code
+    # (for example, if you have some plain-coffeescript classes in your app)
+    else if appClass? && !appClass.__super__?
+      console.debug "Plain JS Reload: #{className} with #{ev.data.url}"
+      eval(code)
 
     else
       console.warn "Couldn't reload #{filePath}."
