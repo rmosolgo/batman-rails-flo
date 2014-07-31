@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rdmosolgo@gmail.com"]
   spec.summary       = %q{Live Reload with Batman.js and Ruby on Rails}
   spec.description   = %q{Uses Facebook's "fb-flo" package to live-update JS code.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/rmosolgo/batman-rails-flo"
   spec.license       = "MIT"
 
   spec.files         = Dir['{lib,vendor}/**/*', 'Rakefile', 'README.md']
