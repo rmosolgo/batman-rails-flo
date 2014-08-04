@@ -4,6 +4,7 @@
 
 Live-reload your [batman.js](http://batmanjs.org) app with [`fb-flo`](https://github.com/facebook/fb-flo).
 
+![Example](http://i.imgur.com/AflbrPy.gif)
 
 ## Features
 
