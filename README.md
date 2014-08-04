@@ -13,6 +13,12 @@ Live-reload your [batman.js](http://batmanjs.org) app with [`fb-flo`](https://gi
 - Live reloading CSS
 - Fires `liveReload` on `MyApp` so you can define custom handlers
 
+
+Also, any class on `MyApp` can implement the class method `liveReload(className, newCodeString)`, where:
+
+-  `className` is the class that was reloaded
+-  `newCodeString` is a bunch of JavaScript to be `eval`'d to load the new class.
+
 [Learn more in the wiki!](https://github.com/rmosolgo/batman-rails-flo/wiki)
 
 ## Installation
