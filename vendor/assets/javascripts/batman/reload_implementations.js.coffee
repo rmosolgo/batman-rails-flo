@@ -8,12 +8,15 @@ Batman.Object::liveReload = (newConstructor) ->
   Batman.initializeObject(@)
   @refreshProperties()
 
+Batman.Property::forceRefresh = ->
+  @_accessor = false
+  @refresh()
 
 Batman.Object::refreshProperties = ->
   @_batman.properties.forEach (name, property) ->
     if property instanceof Batman.Keypath
-      property.terminalProperty().refresh()
-    property.refresh()
+      property.terminalProperty().forceRefresh()
+    property.forceRefresh()
 
 ###
 This will force reload of class accessors that are rendered in views.

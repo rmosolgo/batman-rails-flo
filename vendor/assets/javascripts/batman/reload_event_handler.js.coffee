@@ -52,4 +52,5 @@ handleLiveReloadEvent = (ev) ->
 
 if !window._batmanLiveReload
   window.addEventListener('fb-flo-reload', handleLiveReloadEvent)
+  console.log("batman-rails-flo is listening for changes!")
   window._batmanLiveReload = true # only attach the listener once, just in case

@@ -60,6 +60,7 @@ function resolver(filepath, callback) {
       contents: contents,
       match: "indexOf",
     });
+    console.log("--> success")
   }
   catch (err) {
     console.log(err);
