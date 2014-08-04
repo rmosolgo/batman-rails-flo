@@ -1,5 +1,7 @@
 # batman-rails-flo
 
+[![Gem Version](https://badge.fury.io/rb/batman-rails-flo.svg)](http://badge.fury.io/rb/batman-rails-flo)
+
 Live-reload your [batman.js](http://batmanjs.org) app with [`fb-flo`](https://github.com/facebook/fb-flo).
 
 
@@ -39,6 +41,9 @@ You'll need node.js. Execute:
 
 And re-connect with the `fb-flo` plugin if necessary
 
+## Known Issues
+
+- You have to reload after adding new files
 
 ## Contributing
 
