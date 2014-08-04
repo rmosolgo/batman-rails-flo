@@ -23,6 +23,8 @@ Also, any class on `MyApp` can implement the class method `liveReload(className,
 
 ## Installation
 
+_This gem expects your batman app to be in `app/assets/batman`. Sorry, it's not configurable yet!_
+
 Get the [`fb-flo`](https://chrome.google.com/webstore/detail/fb-flo/ahkfhobdidabddlalamkkiafpipdfchp) Chrome extension.
 
 Add this line to your application's Gemfile:
