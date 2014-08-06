@@ -23,8 +23,6 @@ Also, any class on `MyApp` can implement the class method `liveReload(className,
 
 ## Installation
 
-_This gem expects your batman app to be in `app/assets/batman`. Sorry, it's not configurable yet!_
-
 Get the [`fb-flo`](https://chrome.google.com/webstore/detail/fb-flo/ahkfhobdidabddlalamkkiafpipdfchp) Chrome extension.
 
 Add this line to your application's Gemfile:
@@ -40,6 +38,11 @@ Add the client code to your batman.js app's Sprockets manifest:
 
 ```coffeescript
 #= require batman/live_reload
+```
+
+Also, if your app isn't in the /assets/batman folder, you will need to set the pathToHTML variable here so that it knows where to find your views.
+```
+Batman.config.pathToHTML = '/assets/html'
 ```
 
 ## Run the live-reload server
